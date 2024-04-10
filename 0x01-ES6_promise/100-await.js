@@ -5,10 +5,9 @@ async function asyncUploadUser() {
     const photo = await uploadPhoto();
     const user = await createUser();
     console.log(photo.body, user.firstName, user.lastName);
-    }
-    catch (error) {
-        console.log(error.message);
-        }
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 
 asyncUploadUser().then(console.log).catch(console.error);
