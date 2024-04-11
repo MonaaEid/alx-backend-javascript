@@ -1,10 +1,10 @@
 export default class Airport {
-    constructor(name, code) {
-        this._name = name;
-        this._code = code;
-    }
+  constructor(name, code) {
+    this.name = name;
+    this.code = code;
+  }
 
-    get [Symbol.toStringTag]() {
-        return 'Airport';
-    }
+  get [Symbol.toStringTag]() {
+    return 'Airport';
+  }
 }
