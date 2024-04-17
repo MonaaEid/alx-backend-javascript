@@ -1,8 +1,6 @@
 export default function cleanSet(set, startString) {
-    const newSet = [...set].filter(value => value.startsWith(startString));
-    return newSet.join("-");
+  if (!startString) {
+    return '';
+  }
+  return [...set].filter((value) => value.startsWith(startString)).map((value) => value.slice(startString.length)).join('-');
 }
-
-
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
