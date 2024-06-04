@@ -8,10 +8,10 @@ const rl = readline.createInterface({
 console.log('Welcome to Holberton School, what is your name?');
 
 rl.on('line', (input) => {
-  rl.output.write(`Your name is: ${chunk}`);
+  console.log(`Your name is: ${input}`);
 });
 
 rl.on('close', () => {
-  rl.output.write('This important software is now closing\n');
+  console.log('This important software is now closing\n');
 });
 
