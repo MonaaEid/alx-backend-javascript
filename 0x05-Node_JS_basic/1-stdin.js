@@ -12,6 +12,5 @@ rl.on('line', (input) => {
 });
 
 rl.on('close', () => {
-  console.log('This important software is now closing\n');
+  console.log('This important software is now closing');
 });
-
