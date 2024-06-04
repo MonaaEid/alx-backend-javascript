@@ -15,4 +15,3 @@ rl.on('close', () => {
   console.log('This important software is now closing');
 });
 
-module.exports = rl;
