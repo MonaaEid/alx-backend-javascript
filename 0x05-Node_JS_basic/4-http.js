@@ -2,11 +2,15 @@ const { createServer } = require('node:http');
 
 const hostname = '127.0.0.1';
 const port = 1245;
+const app = http.createServer();
 
-const app = createServer((req, res) => {
-  res.statusCode = 200;
+app.on('request', (_, res) => {
+  const responseText = 'Hello Holberton School!';
+
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Holberton School!');
+  res.setHeader('Content-Length', responseText.length);
+  res.statusCode = 200;
+  res.write(Buffer.from(responseText));
 });
 
 app.listen(port, hostname, () => {
