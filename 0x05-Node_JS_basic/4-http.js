@@ -10,6 +10,7 @@ const app = createServer((req, res) => {
 });
 
 app.listen(port, hostname, () => {
+    process.stdout.write(`Server listening at -> http://${hostname}:${port}\n`);
 });
 
 module.exports = app;
