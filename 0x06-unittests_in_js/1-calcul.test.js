@@ -9,25 +9,23 @@ describe("calculateNumber()", function() {
       assert.strictEqual(res, 3);
     });
     it(`checking if numbers round`, function() {
-      const res = calculateNumber("SUM", 1.4, 2.2);
-      assert.strictEqual(res, 3);
-    });
-    it(`checking if numbers round`, function() {
-      const res = calculateNumber("SUM", 0, 0);
-      assert.strictEqual(res, 0);
-    });
-    it(`checking if numbers round`, function() {
       const res = calculateNumber("SUBTRACT", 1.4, 2.2);
       assert.strictEqual(res, -1);
     });
     it(`checking if numbers round`, function() {
-      const res = calculateNumber("SUBTRACT", 1.6, 2.7);
-      assert.strictEqual(res, -1);
+      const res = calculateNumber("SUBTRACT", 4.9, 2.7);
+      assert.strictEqual(res, 2);
     });
     it(`checking if numbers round`, function() {
-      const res = calculateNumber("DIVIDE", 1.4, 2.2);
-        assert.strictEqual(res, 0.5);
-});
-
-
+      const res = calculateNumber("DIVIDE", 4, 2);
+      assert.strictEqual(res, 2);
+    });
+    it(`checking if numbers round`, function() {
+      const res = calculateNumber("DIVIDE", 1.7, 0);
+      assert.strictEqual(res, "Error");
+    });
+    it(`checking if numbers round`, function() {
+      const res = calculateNumber("DIVIDE", 1.4, 4.6);
+      assert.strictEqual(res, 0.2);
+    });
 });
