@@ -15,6 +15,7 @@ function calculateNumber(a, b) {
             c = aRound / bRound;
             break;
         }
+    return c;
 }
   
 module.exports = calculateNumber;
