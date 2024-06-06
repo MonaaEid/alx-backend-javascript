@@ -1,4 +1,4 @@
-class Utlis {
+class Utils {
     static calculateNumber(type, a, b) {
         const aRound = Math.round(a);
         const bRound = Math.round(b);
@@ -20,4 +20,4 @@ class Utlis {
     }
 }
 
-module.exports = Utlis;
+module.exports = Utils;
