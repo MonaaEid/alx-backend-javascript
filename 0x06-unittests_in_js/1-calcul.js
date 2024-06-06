@@ -1,4 +1,4 @@
-function calculateNumber(a, b) {
+function calculateNumber(type, a, b) {
     const aRound = Math.round(a);
     const bRound = Math.round(b);
     let c = 0;
