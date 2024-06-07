@@ -12,14 +12,15 @@ app.get('/cart/:id([0-9]+)', (request, response) => {
 });
 
 app.get('/available_payments', (request, response) => {
-    response.json({
-        payment_methods: {
-            credit_cards: true,
-            paypal: false
-        }
-    });
+  response.set("Content-Type", "application/json");
+  const payMethods = {
+payment_methods: {
+        credit_cards: true,
+        paypal: false
 }
-);
+  }
+  response.send(payMethods);
+});
 
 app.post('/login', (request, response) => {
   const userName = request.body.userName;
