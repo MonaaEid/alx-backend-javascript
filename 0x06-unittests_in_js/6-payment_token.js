@@ -2,7 +2,7 @@ function getPaymentTokenFromAPI() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve
-        ('patoken');
+        ({data: 'Successful response from the API' });
     }, 1000);
     });
 }
